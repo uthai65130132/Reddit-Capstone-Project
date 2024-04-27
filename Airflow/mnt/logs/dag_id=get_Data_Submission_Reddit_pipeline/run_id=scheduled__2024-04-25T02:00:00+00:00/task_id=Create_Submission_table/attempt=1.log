@@ -1,0 +1,14 @@
+[2024-04-25T03:00:01.757+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: get_Data_Submission_Reddit_pipeline.Create_Submission_table scheduled__2024-04-25T02:00:00+00:00 [queued]>
+[2024-04-25T03:00:01.771+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: get_Data_Submission_Reddit_pipeline.Create_Submission_table scheduled__2024-04-25T02:00:00+00:00 [queued]>
+[2024-04-25T03:00:01.771+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 1
+[2024-04-25T03:00:01.792+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): Create_Submission_table> on 2024-04-25 02:00:00+00:00
+[2024-04-25T03:00:01.798+0000] {standard_task_runner.py:60} INFO - Started process 2222 to run task
+[2024-04-25T03:00:01.804+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'get_Data_Submission_Reddit_pipeline', 'Create_Submission_table', 'scheduled__2024-04-25T02:00:00+00:00', '--job-id', '539', '--raw', '--subdir', 'DAGS_FOLDER/GetPost.py', '--cfg-path', '/tmp/tmpv1aldoxe']
+[2024-04-25T03:00:01.806+0000] {standard_task_runner.py:88} INFO - Job 539: Subtask Create_Submission_table
+[2024-04-25T03:00:01.869+0000] {task_command.py:423} INFO - Running <TaskInstance: get_Data_Submission_Reddit_pipeline.Create_Submission_table scheduled__2024-04-25T02:00:00+00:00 [running]> on host 81ccd7ea228a
+[2024-04-25T03:00:01.981+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='get_Data_Submission_Reddit_pipeline' AIRFLOW_CTX_TASK_ID='Create_Submission_table' AIRFLOW_CTX_EXECUTION_DATE='2024-04-25T02:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-25T02:00:00+00:00'
+[2024-04-25T03:00:01.993+0000] {base.py:83} INFO - Using connection ID 'my_***_conn' for task execution.
+[2024-04-25T03:00:02.005+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-04-25T03:00:02.017+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=get_Data_Submission_Reddit_pipeline, task_id=Create_Submission_table, execution_date=20240425T020000, start_date=20240425T030001, end_date=20240425T030002
+[2024-04-25T03:00:02.056+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-25T03:00:02.075+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

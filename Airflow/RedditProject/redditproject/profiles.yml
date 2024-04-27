@@ -1,0 +1,12 @@
+redditproject:
+  outputs:
+    dev:
+      dbname: postgres
+      host: localhost
+      pass: postgres
+      port: 5432
+      schema: reddit
+      threads: 1
+      type: postgres
+      user: postgres
+  target: dev

@@ -1,0 +1,28 @@
+[2024-04-23T09:48:25.109+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: get_Data_Submission_Reddit_pipeline.load_data_to_postgres scheduled__2024-04-23T00:00:00+00:00 [queued]>
+[2024-04-23T09:48:25.208+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: get_Data_Submission_Reddit_pipeline.load_data_to_postgres scheduled__2024-04-23T00:00:00+00:00 [queued]>
+[2024-04-23T09:48:25.220+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 1
+[2024-04-23T09:48:25.419+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): load_data_to_postgres> on 2024-04-23 00:00:00+00:00
+[2024-04-23T09:48:25.474+0000] {standard_task_runner.py:60} INFO - Started process 636 to run task
+[2024-04-23T09:48:25.491+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'get_Data_Submission_Reddit_pipeline', 'load_data_to_postgres', 'scheduled__2024-04-23T00:00:00+00:00', '--job-id', '362', '--raw', '--subdir', 'DAGS_FOLDER/GetPost.py', '--cfg-path', '/tmp/tmptmmh_q4t']
+[2024-04-23T09:48:25.519+0000] {standard_task_runner.py:88} INFO - Job 362: Subtask load_data_to_postgres
+[2024-04-23T09:48:25.944+0000] {task_command.py:423} INFO - Running <TaskInstance: get_Data_Submission_Reddit_pipeline.load_data_to_postgres scheduled__2024-04-23T00:00:00+00:00 [running]> on host 694ea5737885
+[2024-04-23T09:48:26.928+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='get_Data_Submission_Reddit_pipeline' AIRFLOW_CTX_TASK_ID='load_data_to_postgres' AIRFLOW_CTX_EXECUTION_DATE='2024-04-23T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-23T00:00:00+00:00'
+[2024-04-23T09:48:27.035+0000] {logging_mixin.py:188} INFO - /opt/***/dags/staging/Submission_Reddit_Data_2024-04-23T00:00:00+00:00.json
+[2024-04-23T09:48:27.118+0000] {base.py:83} INFO - Using connection ID 'my_***_conn' for task execution.
+[2024-04-23T09:48:27.284+0000] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/GetPost.py", line 110, in _load_data_to_postgres
+    cursor.execute(sql, (ID, Title, Score, Author, selftext, Create_Date))
+psycopg2.errors.StringDataRightTruncation: value too long for type character varying(1000)
+
+[2024-04-23T09:48:27.364+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=get_Data_Submission_Reddit_pipeline, task_id=load_data_to_***, execution_date=20240423T000000, start_date=20240423T094825, end_date=20240423T094827
+[2024-04-23T09:48:28.187+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 362 for task load_data_to_*** (value too long for type character varying(1000)
+; 636)
+[2024-04-23T09:48:28.392+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-04-23T09:48:28.731+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check
