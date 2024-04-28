@@ -1,0 +1,30 @@
+[2024-04-23T04:06:40.735+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: get_Data_Submission_Reddit_pipeline.get_Data_Submission_Reddit scheduled__2024-04-23T01:00:00+00:00 [queued]>
+[2024-04-23T04:06:40.793+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: get_Data_Submission_Reddit_pipeline.get_Data_Submission_Reddit scheduled__2024-04-23T01:00:00+00:00 [queued]>
+[2024-04-23T04:06:40.800+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 1
+[2024-04-23T04:06:40.957+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): get_Data_Submission_Reddit> on 2024-04-23 01:00:00+00:00
+[2024-04-23T04:06:40.984+0000] {standard_task_runner.py:60} INFO - Started process 250 to run task
+[2024-04-23T04:06:40.998+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'get_Data_Submission_Reddit_pipeline', 'get_Data_Submission_Reddit', 'scheduled__2024-04-23T01:00:00+00:00', '--job-id', '172', '--raw', '--subdir', 'DAGS_FOLDER/GetPost.py', '--cfg-path', '/tmp/tmphq52cse0']
+[2024-04-23T04:06:41.031+0000] {standard_task_runner.py:88} INFO - Job 172: Subtask get_Data_Submission_Reddit
+[2024-04-23T04:06:41.206+0000] {task_command.py:423} INFO - Running <TaskInstance: get_Data_Submission_Reddit_pipeline.get_Data_Submission_Reddit scheduled__2024-04-23T01:00:00+00:00 [running]> on host 694ea5737885
+[2024-04-23T04:06:41.453+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='get_Data_Submission_Reddit_pipeline' AIRFLOW_CTX_TASK_ID='get_Data_Submission_Reddit' AIRFLOW_CTX_EXECUTION_DATE='2024-04-23T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-23T01:00:00+00:00'
+[2024-04-23T04:06:41.610+0000] {logging_mixin.py:188} INFO - True
+[2024-04-23T04:06:43.023+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.8/site-packages/***/utils/context.py:315 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2024-04-23T04:06:43.026+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-04-23T04:06:43.036+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=get_Data_Submission_Reddit_pipeline, task_id=get_Data_Submission_Reddit, execution_date=20240423T010000, start_date=20240423T040640, end_date=20240423T040643
+[2024-04-23T04:06:43.068+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-23T04:06:43.088+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-04-23T09:47:55.870+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: get_Data_Submission_Reddit_pipeline.get_Data_Submission_Reddit scheduled__2024-04-23T01:00:00+00:00 [queued]>
+[2024-04-23T09:47:55.926+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: get_Data_Submission_Reddit_pipeline.get_Data_Submission_Reddit scheduled__2024-04-23T01:00:00+00:00 [queued]>
+[2024-04-23T09:47:55.926+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 1
+[2024-04-23T09:47:56.044+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): get_Data_Submission_Reddit> on 2024-04-23 01:00:00+00:00
+[2024-04-23T09:47:56.113+0000] {standard_task_runner.py:60} INFO - Started process 573 to run task
+[2024-04-23T09:47:56.136+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'get_Data_Submission_Reddit_pipeline', 'get_Data_Submission_Reddit', 'scheduled__2024-04-23T01:00:00+00:00', '--job-id', '354', '--raw', '--subdir', 'DAGS_FOLDER/GetPost.py', '--cfg-path', '/tmp/tmpnb24hmi2']
+[2024-04-23T09:47:56.147+0000] {standard_task_runner.py:88} INFO - Job 354: Subtask get_Data_Submission_Reddit
+[2024-04-23T09:47:56.395+0000] {task_command.py:423} INFO - Running <TaskInstance: get_Data_Submission_Reddit_pipeline.get_Data_Submission_Reddit scheduled__2024-04-23T01:00:00+00:00 [running]> on host 694ea5737885
+[2024-04-23T09:47:56.839+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='get_Data_Submission_Reddit_pipeline' AIRFLOW_CTX_TASK_ID='get_Data_Submission_Reddit' AIRFLOW_CTX_EXECUTION_DATE='2024-04-23T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-23T01:00:00+00:00'
+[2024-04-23T09:47:56.999+0000] {logging_mixin.py:188} INFO - True
+[2024-04-23T09:47:58.693+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.8/site-packages/***/utils/context.py:315 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2024-04-23T09:47:58.698+0000] {python.py:201} INFO - Done. Returned value was: /opt/***/dags/staging/Submission_Reddit_Data_2024-04-23T01:00:00+00:00.json
+[2024-04-23T09:47:58.749+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=get_Data_Submission_Reddit_pipeline, task_id=get_Data_Submission_Reddit, execution_date=20240423T010000, start_date=20240423T094755, end_date=20240423T094758
+[2024-04-23T09:47:58.781+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-23T09:47:58.848+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

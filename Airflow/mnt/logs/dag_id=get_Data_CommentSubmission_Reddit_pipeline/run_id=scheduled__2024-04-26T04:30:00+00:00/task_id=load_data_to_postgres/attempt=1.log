@@ -1,0 +1,15 @@
+[2024-04-26T05:30:02.802+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: get_Data_CommentSubmission_Reddit_pipeline.load_data_to_postgres scheduled__2024-04-26T04:30:00+00:00 [queued]>
+[2024-04-26T05:30:02.809+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: get_Data_CommentSubmission_Reddit_pipeline.load_data_to_postgres scheduled__2024-04-26T04:30:00+00:00 [queued]>
+[2024-04-26T05:30:02.810+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 1
+[2024-04-26T05:30:02.824+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): load_data_to_postgres> on 2024-04-26 04:30:00+00:00
+[2024-04-26T05:30:02.830+0000] {standard_task_runner.py:60} INFO - Started process 17812 to run task
+[2024-04-26T05:30:02.833+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'get_Data_CommentSubmission_Reddit_pipeline', 'load_data_to_postgres', 'scheduled__2024-04-26T04:30:00+00:00', '--job-id', '614', '--raw', '--subdir', 'DAGS_FOLDER/GetComment.py', '--cfg-path', '/tmp/tmp27rfpd6l']
+[2024-04-26T05:30:02.835+0000] {standard_task_runner.py:88} INFO - Job 614: Subtask load_data_to_postgres
+[2024-04-26T05:30:02.879+0000] {task_command.py:423} INFO - Running <TaskInstance: get_Data_CommentSubmission_Reddit_pipeline.load_data_to_postgres scheduled__2024-04-26T04:30:00+00:00 [running]> on host 81ccd7ea228a
+[2024-04-26T05:30:02.953+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='get_Data_CommentSubmission_Reddit_pipeline' AIRFLOW_CTX_TASK_ID='load_data_to_postgres' AIRFLOW_CTX_EXECUTION_DATE='2024-04-26T04:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-26T04:30:00+00:00'
+[2024-04-26T05:30:02.962+0000] {logging_mixin.py:188} INFO - /opt/***/dags/staging/CommentSubmission_Reddit_Data_2024-04-26T04:30:00+00:00.json
+[2024-04-26T05:30:02.969+0000] {base.py:83} INFO - Using connection ID 'my_***_conn' for task execution.
+[2024-04-26T05:30:02.989+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-04-26T05:30:02.997+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=get_Data_CommentSubmission_Reddit_pipeline, task_id=load_data_to_***, execution_date=20240426T043000, start_date=20240426T053002, end_date=20240426T053002
+[2024-04-26T05:30:03.046+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-26T05:30:03.063+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

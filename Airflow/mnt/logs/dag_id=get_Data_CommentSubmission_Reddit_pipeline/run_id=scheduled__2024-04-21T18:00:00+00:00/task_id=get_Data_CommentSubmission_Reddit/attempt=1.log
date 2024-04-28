@@ -1,0 +1,29 @@
+[2024-04-22T09:09:24.081+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: get_Data_CommentSubmission_Reddit_pipeline.get_Data_CommentSubmission_Reddit scheduled__2024-04-21T18:00:00+00:00 [queued]>
+[2024-04-22T09:09:24.157+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: get_Data_CommentSubmission_Reddit_pipeline.get_Data_CommentSubmission_Reddit scheduled__2024-04-21T18:00:00+00:00 [queued]>
+[2024-04-22T09:09:24.157+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 1
+[2024-04-22T09:09:24.491+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): get_Data_CommentSubmission_Reddit> on 2024-04-21 18:00:00+00:00
+[2024-04-22T09:09:24.525+0000] {standard_task_runner.py:60} INFO - Started process 18141 to run task
+[2024-04-22T09:09:24.569+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'get_Data_CommentSubmission_Reddit_pipeline', 'get_Data_CommentSubmission_Reddit', 'scheduled__2024-04-21T18:00:00+00:00', '--job-id', '99', '--raw', '--subdir', 'DAGS_FOLDER/GetComment.py', '--cfg-path', '/tmp/tmp2pwtouoh']
+[2024-04-22T09:09:24.584+0000] {standard_task_runner.py:88} INFO - Job 99: Subtask get_Data_CommentSubmission_Reddit
+[2024-04-22T09:09:24.799+0000] {task_command.py:423} INFO - Running <TaskInstance: get_Data_CommentSubmission_Reddit_pipeline.get_Data_CommentSubmission_Reddit scheduled__2024-04-21T18:00:00+00:00 [running]> on host d4c97f52cb78
+[2024-04-22T09:09:25.110+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='get_Data_CommentSubmission_Reddit_pipeline' AIRFLOW_CTX_TASK_ID='get_Data_CommentSubmission_Reddit' AIRFLOW_CTX_EXECUTION_DATE='2024-04-21T18:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-21T18:00:00+00:00'
+[2024-04-22T09:09:25.204+0000] {logging_mixin.py:188} INFO - True
+[2024-04-22T09:09:26.490+0000] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/GetComment.py", line 35, in _get_Data_CommentSubmission_Reddit
+    for comment in reddit.comment("dataengineering").new(limit=20):
+  File "/home/airflow/.local/lib/python3.8/site-packages/praw/models/reddit/base.py", line 35, in __getattr__
+    self._fetch()
+  File "/home/airflow/.local/lib/python3.8/site-packages/praw/models/reddit/comment.py", line 192, in _fetch
+    raise ClientException(f"No data returned for comment {self.fullname}")
+praw.exceptions.ClientException: No data returned for comment t1_dataengineering
+[2024-04-22T09:09:26.504+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=get_Data_CommentSubmission_Reddit_pipeline, task_id=get_Data_CommentSubmission_Reddit, execution_date=20240421T180000, start_date=20240422T090924, end_date=20240422T090926
+[2024-04-22T09:09:26.531+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 99 for task get_Data_CommentSubmission_Reddit (No data returned for comment t1_dataengineering; 18141)
+[2024-04-22T09:09:26.583+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-04-22T09:09:26.609+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

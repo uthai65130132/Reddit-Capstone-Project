@@ -1,0 +1,1 @@
+[2024-04-23T09:17:42.329+0000] {scheduler_job_runner.py:781} ERROR - Executor reports task instance <TaskInstance: get_Data_Submission_Reddit_pipeline.load_data_to_postgres manual__2024-04-23T09:07:34.627533+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?
